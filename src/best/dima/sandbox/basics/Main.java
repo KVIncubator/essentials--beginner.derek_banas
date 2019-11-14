@@ -1,9 +1,12 @@
 package best.dima.sandbox.basics;
 
+import best.dima.sandbox.basics.conditionals.Conditionals;
 import best.dima.sandbox.basics.datatypes.DataTypes;
+import best.dima.sandbox.basics.looping.Looping;
 import best.dima.sandbox.basics.mathematics.Mathematics;
 import best.dima.sandbox.basics.print.Print;
 import best.dima.sandbox.basics.strings.Strings;
+import best.dima.sandbox.basics.arrays.ArraysData;
 
 public class Main {
 
@@ -21,6 +24,9 @@ public class Main {
     static private DataTypes dataTypes = new DataTypes();
     static private Mathematics mathematics = new Mathematics();
     static private Strings strings = new Strings();
+    static private ArraysData arrays = new ArraysData();
+    static private Conditionals conditionals = new Conditionals();
+    static private Looping looping = new Looping();
 
     // ---- MAIN FUNCTION ----
 
@@ -42,5 +48,11 @@ public class Main {
         mathematics.run();
         // Strings
         strings.run();
+        // Arrays
+        arrays.run();
+        // Conditionals
+        conditionals.run();
+        // Looping
+        looping.run();
     }
 }

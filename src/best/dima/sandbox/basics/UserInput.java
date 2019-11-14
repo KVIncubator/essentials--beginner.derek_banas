@@ -1,5 +1,6 @@
 package best.dima.sandbox.basics;
 
+import javax.swing.*;
 import java.util.*;
 
 public class UserInput {
@@ -19,10 +20,25 @@ public class UserInput {
         int v2, v3;
     }
 
+    // ---- USER INPUT ----
+    // The Scanner object receives user input
+    // using nextShort, nextByte, nextBoolean,
+    // nextInt, nextFloat, nextDouble,
+    // nextLong, nextLine
     public static void main(String[] args) {
-        System.out.print("Enter your name: ");
-        // Read user input
-        String yourName = input.nextLine();
-        System.out.printf("Hello, %s!!!!!%s", yourName, "\n"); // say hello
+        System.out.print("Enter name: ");
+
+        // Did the user enter a string
+        // Use hasNextDataType to check if a
+        // valid type was entered
+        if(input.hasNextLine()){
+            String userName = input.nextLine();
+            System.out.println("Hello "+userName);
+        }
+
+        // Get input using a dialog box
+        String jopName =
+                JOptionPane.showInputDialog("Enter Name");
+        System.out.println("Hello "+jopName);
     }
 }
