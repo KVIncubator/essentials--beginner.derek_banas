@@ -2,6 +2,7 @@ package best.dima.sandbox.basics;
 
 import best.dima.sandbox.basics.conditionals.Conditionals;
 import best.dima.sandbox.basics.datatypes.DataTypes;
+import best.dima.sandbox.basics.exceptionhandling.ExceptionHandling;
 import best.dima.sandbox.basics.files.Files;
 import best.dima.sandbox.basics.generics.Generics;
 import best.dima.sandbox.basics.lambdaexpressions.LambdaExpressions;
@@ -12,6 +13,7 @@ import best.dima.sandbox.basics.regularexpressions.RegularExpressions;
 import best.dima.sandbox.basics.streams.Streams;
 import best.dima.sandbox.basics.strings.Strings;
 import best.dima.sandbox.basics.arrays.ArraysData;
+import best.dima.sandbox.basics.threads.Threads;
 
 public class Main {
 
@@ -37,6 +39,9 @@ public class Main {
     static private LambdaExpressions lambdas = new LambdaExpressions();
     static private Files files = new Files();
     static private Generics generics = new Generics();
+    static private Threads threads = new Threads();
+    static private ExceptionHandling exceptions = new ExceptionHandling();
+
 
     // ---- MAIN FUNCTION ----
 
@@ -74,6 +79,9 @@ public class Main {
         files.run();
         // Generics
         generics.run();
-
+        // Threads
+        threads.run();
+        // Exceptions
+        exceptions.run();
     }
 }
