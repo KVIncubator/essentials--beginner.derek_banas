@@ -2,9 +2,14 @@ package best.dima.sandbox.basics;
 
 import best.dima.sandbox.basics.conditionals.Conditionals;
 import best.dima.sandbox.basics.datatypes.DataTypes;
+import best.dima.sandbox.basics.files.Files;
+import best.dima.sandbox.basics.generics.Generics;
+import best.dima.sandbox.basics.lambdaexpressions.LambdaExpressions;
 import best.dima.sandbox.basics.looping.Looping;
 import best.dima.sandbox.basics.mathematics.Mathematics;
 import best.dima.sandbox.basics.print.Print;
+import best.dima.sandbox.basics.regularexpressions.RegularExpressions;
+import best.dima.sandbox.basics.streams.Streams;
 import best.dima.sandbox.basics.strings.Strings;
 import best.dima.sandbox.basics.arrays.ArraysData;
 
@@ -27,6 +32,11 @@ public class Main {
     static private ArraysData arrays = new ArraysData();
     static private Conditionals conditionals = new Conditionals();
     static private Looping looping = new Looping();
+    static private Streams streams = new Streams();
+    static private RegularExpressions regex = new RegularExpressions();
+    static private LambdaExpressions lambdas = new LambdaExpressions();
+    static private Files files = new Files();
+    static private Generics generics = new Generics();
 
     // ---- MAIN FUNCTION ----
 
@@ -54,5 +64,16 @@ public class Main {
         conditionals.run();
         // Looping
         looping.run();
+        // Streams
+        streams.run();
+        // Regular Expressions
+        regex.run();
+        // Lambdas
+        lambdas.run();
+        // Files
+        files.run();
+        // Generics
+        generics.run();
+
     }
 }
