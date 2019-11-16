@@ -1,5 +1,6 @@
 package best.dima.sandbox.lang.basics;
 
+import best.dima.sandbox.lang.basics.annotations.UseCustomAnnotation;
 import best.dima.sandbox.lang.basics.arrays.ArraysData;
 import best.dima.sandbox.lang.basics.conditionals.Conditionals;
 import best.dima.sandbox.lang.basics.files.Files;
@@ -80,9 +81,12 @@ public class Main {
         files.run();
         // Generics
         generics.run();
-        // Threads
-        threads.run();
         // Exceptions
         exceptions.run();
+        // Custom annotation reader
+        UseCustomAnnotation.main(args);
+        // Threads
+        threads.run();
+
     }
 }
