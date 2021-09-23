@@ -24,9 +24,12 @@ import java.lang.annotation.RetentionPolicy;
 // Change retention policy to RUNTIME (default is CLASS)
 @Retention(RetentionPolicy.RUNTIME)
 public @interface TypeHeader {
-    // Default value specified for developer attribute
-    String developer() default "Unknown";
-    String lastModified();
-    String [] teamMembers();
-    int meaningOfLife();
+  // Default value specified for developer attribute
+  String developer() default "Unknown";
+
+  String lastModified();
+
+  String[] teamMembers();
+
+  int meaningOfLife();
 }

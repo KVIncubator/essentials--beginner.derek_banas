@@ -16,45 +16,45 @@
 
 package org.ujar.beginner.derek_banas.learn.java_basics;
 
-import javax.swing.*;
-import java.util.*;
+import java.util.Scanner;
+import javax.swing.JOptionPane;
 
 public class UserInput {
-    // make new object of class Scanner, based on System.in and call it input
-    static private Scanner input = new Scanner(System.in);
+  // make new object of class Scanner, based on System.in and call it input
+  static private Scanner input = new Scanner(System.in);
 
-    // Constructor
-    public void UserInput() {
-        // ---- VARIABLES ----
-        // Must start with a letter and then
-        // letters, numbers, _ or $
+  // ---- USER INPUT ----
+  // The Scanner object receives user input
+  // using nextShort, nextByte, nextBoolean,
+  // nextInt, nextFloat, nextDouble,
+  // nextLong, nextLine
+  public static void main(String[] args) {
+    System.out.print("Enter name: ");
 
-        // Create a variable for holding whole numbers
-        int var1 = 100;
-
-        // Create multiple variables
-        int v2, v3;
+    // Did the user enter a string
+    // Use hasNextDataType to check if a
+    // valid type was entered
+    if (input.hasNextLine()) {
+      String userName = input.nextLine();
+      System.out.println("Hello " + userName);
     }
 
-    // ---- USER INPUT ----
-    // The Scanner object receives user input
-    // using nextShort, nextByte, nextBoolean,
-    // nextInt, nextFloat, nextDouble,
-    // nextLong, nextLine
-    public static void main(String[] args) {
-        System.out.print("Enter name: ");
+    // Get input using a dialog box
+    String jopName =
+        JOptionPane.showInputDialog("Enter Name");
+    System.out.println("Hello " + jopName);
+  }
 
-        // Did the user enter a string
-        // Use hasNextDataType to check if a
-        // valid type was entered
-        if(input.hasNextLine()){
-            String userName = input.nextLine();
-            System.out.println("Hello "+userName);
-        }
+  // Constructor
+  public void UserInput() {
+    // ---- VARIABLES ----
+    // Must start with a letter and then
+    // letters, numbers, _ or $
 
-        // Get input using a dialog box
-        String jopName =
-                JOptionPane.showInputDialog("Enter Name");
-        System.out.println("Hello "+jopName);
-    }
+    // Create a variable for holding whole numbers
+    int var1 = 100;
+
+    // Create multiple variables
+    int v2, v3;
+  }
 }

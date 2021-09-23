@@ -17,22 +17,23 @@
 package org.ujar.beginner.derek_banas.learn.java_basics.threads.test;
 
 public class ThreadTest extends Thread implements Runnable {
-    Customer cust;
+  Customer cust;
 
-    public ThreadTest(Customer cust) {
-        this.cust = cust;
-    }
-    @Override
-    public void run() {
-        for (int i = 0; i < 4; i++) {
-            try {
-                BankAccount account = BankAccount.getAccount(cust);
-                account.withdraw(10);
-                Thread.sleep(1000);
+  public ThreadTest(Customer cust) {
+    this.cust = cust;
+  }
 
-            } catch(Exception e) {
-                e.printStackTrace();
-            }
-        }
+  @Override
+  public void run() {
+    for (int i = 0; i < 4; i++) {
+      try {
+        BankAccount account = BankAccount.getAccount(cust);
+        account.withdraw(10);
+        Thread.sleep(1000);
+
+      } catch (Exception e) {
+        e.printStackTrace();
+      }
     }
+  }
 }
